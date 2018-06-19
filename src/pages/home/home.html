@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page1">
+  <ion-card id="home-card22">
+    <ion-list *ngFor="let p of posts">
+      <ion-item color="none" id="home-list-item8" >
+        <ion-item id="home-list-item-container3">
+          <div id="home-markdown3" class="show-list-numbers-and-dots">
+            <p style="margin-top:0px;color:#000000;">
+              Nome: {{p.uid.nome}}<br>
+              <br>
+              {{p.texto}}
+            </p>
+          </div>
+        </ion-item>
+        <button ion-button (click)="like(p, 1)">
+          <ion-icon name="thumbs-up" item-left></ion-icon>
+          Like {{p.likes}}
+        </button>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
+<ion-footer no-shadow>
+  <ion-toolbar position="bottom">
+    <button ion-button full (click)="criarPost()">Criar Post</button>
+  </ion-toolbar>
+</ion-footer>

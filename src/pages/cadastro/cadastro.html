@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Cadastro
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page3">
+  <form id="cadastro-form2">
+    <ion-item id="cadastro-input4">
+      <ion-label>
+        Nome
+      </ion-label>
+      <ion-input type="text" placeholder="" name="nome" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+    <ion-item id="cadastro-input5">
+      <ion-label>
+        Email
+      </ion-label>
+      <ion-input type="text" placeholder="" name="email" [(ngModel)]="email"></ion-input>
+    </ion-item>
+    <ion-item id="cadastro-input3">
+      <ion-label>
+        Senha
+      </ion-label>
+      <ion-input type="password" placeholder="" name="pass" [(ngModel)]="senha"></ion-input>
+    </ion-item>
+  </form>
+  <button id="cadastro-button2" ion-button color="positive" block (click)="cadastrar()">
+    Cadastrar
+  </button>
+</ion-content>
